@@ -45,13 +45,13 @@ const _ = require('lodown-oliviasaborush');
  - **Objective**: Find the oldest customer's name
  - **Input**: `Array`
  - **Output**: `String`
- - **Constraints**:
+ - **Constraints**: reduce
 
 ### 4: `youngestCustomer`
  - **Objective**: Find the youngest customer's name
  - **Input**: `Array`
  - **Output**: `String`
- - **Constraints**:
+ - **Constraints**: reduce
 
 ### 5: `averageBalance`
  - **Objective**: Find the average balance of all customers
