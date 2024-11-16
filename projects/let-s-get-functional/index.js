@@ -26,7 +26,10 @@ let males = _.filter(array, (customer) => customer.gender === 'male');
 return males.length
 }
 
-var femaleCount;
+var femaleCount = function(array){
+let females = _.filter(array, (customer) => customer.gender === 'female');
+return females.length    
+}
 
 var oldestCustomer;
 
