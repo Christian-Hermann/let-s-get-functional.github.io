@@ -73,9 +73,18 @@ var friendFirstLetterCount = function(array, customer, letter){
     return 0;
 };
 
-var friendsCount;
+var friendsCount = function(array, name){
+  return array.filter(customer =>
+  customer.friends.some(friend => friend.name === name)
+  ).map(customer => customer.name);
+};
 
-var topThreeTags;
+var topThreeTags = function(array){
+    
+}
+
+
+
 
 var genderCount;
 
