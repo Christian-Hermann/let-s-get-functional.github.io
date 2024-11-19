@@ -43,9 +43,22 @@ var youngestCustomer = function(array){
 return _.reduce(array, (youngest, current) => { return current.age < youngest.age ? current : youngest;}).name; 
 }
 
-var averageBalance;
+var averageBalance = function(array){
+const totalBalance = array.reduce((sum, customer) => { 
+const balance = +customer.balance.replace(/[\$,]/g, '');
+return sum + balance
+},0);
+return totalBalance / array.length;
+}
 
-var firstLetterCount;
+var firstLetterCount = function (array, letter){
+    return array.reduce(function(count, customer){
+    if(customer.name[0].toLowerCase() === letter.toLowerCase()){
+        count++
+    }
+    return count
+    },0);
+}
 
 var friendFirstLetterCount;
 
