@@ -60,7 +60,18 @@ var firstLetterCount = function (array, letter){
     },0);
 }
 
-var friendFirstLetterCount;
+var friendFirstLetterCount = function(array, customer, letter){
+    const customerData = array.find(item => item.name === customer);
+    if (customerData){
+        return customerData.friends.reduce((count, friend) =>{
+        if (friend.name[0].toLowerCase()===letter.toLowerCase()){
+        count ++    
+        }
+        return count
+        },0);
+    }
+    return 0;
+};
 
 var friendsCount;
 
