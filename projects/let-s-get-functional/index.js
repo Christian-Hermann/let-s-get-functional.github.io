@@ -80,13 +80,31 @@ var friendsCount = function(array, name){
 };
 
 var topThreeTags = function(array){
+
+const allTags = array.flatMap(customer => customer.tags);
+
+    const tagFrequency = allTags.reduce((acc, tag) => {
+acc[tag] = (acc[tag] || 0) + 1;
+    return acc;
+ }, {});
+  
     
-}
+const sortedTags = Object.keys(tagFrequency)
+  .sort((a, b) => tagFrequency[b] - tagFrequency[a]);
+  
+    
+  return sortedTags.slice(0, 3);
+  
+};
 
 
+var genderCount = function(array){
+return array.reduce((acc, person) => {
+    acc[person.gender] = (acc[person.gender] || 0) + 1;
+    return acc;
+}, {});
+};
 
-
-var genderCount;
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
